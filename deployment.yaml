@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: progettopython
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: progettopython
+  template:
+    metadata:
+      labels:
+        app: progettopython
+    spec:
+      containers:
+      - name: progettopython
+        image: progettopython:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 5000
