@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: progettopython
-        image: progettopython:latest
+        image: progettopython:v2
         imagePullPolicy: Never
         ports:
         - containerPort: 5000
